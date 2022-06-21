@@ -3,7 +3,27 @@ guid: 6f0a94afa42c375448c92f826058bb44
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Bust_01
+    second: {fileID: 2100000, guid: 2b31c786b114e314eb108c8f9de24f1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Bust_02
+    second: {fileID: 2100000, guid: 6f3c4416c68e1c84788d6b662530811c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Hammer
+    second: {fileID: 2100000, guid: a97f40ecbbae25447b5e0b0da464404f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Nail
+    second: {fileID: 2100000, guid: 82359f9ec3a0781439316821e84091c9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

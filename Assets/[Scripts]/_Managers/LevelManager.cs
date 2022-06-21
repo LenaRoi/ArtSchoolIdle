@@ -21,6 +21,8 @@ namespace EKTemplate
 
         public GameObject exit;
 
+        public Tutorial tutor;
+
         private void Start() => ConstructLevel();
 
         private void ConstructLevel()

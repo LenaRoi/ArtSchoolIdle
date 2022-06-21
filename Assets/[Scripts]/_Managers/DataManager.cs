@@ -34,7 +34,7 @@ namespace EKTemplate
         private void GetDatas()
         {
             level = PlayerPrefs.GetInt(LEVEL_DATA, 1);
-            money = PlayerPrefs.GetInt(MONEY_DATA, 0);
+            money = PlayerPrefs.GetInt(MONEY_DATA, 20);
             sound = PlayerPrefs.GetInt(SOUND_DATA, 1) == 1;
             vibration = PlayerPrefs.GetInt(VIBRATION_DATA, 1) == 1;
         }

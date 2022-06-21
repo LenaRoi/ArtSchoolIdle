@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Area
   - PaintTool
+  - CollectTable
+  - PaintTool2
+  - Student
+  - Violin
+  - Flute
+  - Order
+  - Sculp
   layers:
   - Default
   - TransparentFX

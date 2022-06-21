@@ -18,7 +18,7 @@ namespace EKTemplate
         private void Start()
         {
             restartButton.onClick.AddListener(OnClickRestartButton);
-            moneyText.text = "0";
+            moneyText.text = GameManager.instance.money.ToString();
         }
 
         public void SetMoney(float to, float duration = 0.3f)

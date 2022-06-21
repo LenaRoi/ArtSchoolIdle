@@ -7,6 +7,7 @@ using EKTemplate;
 
 public class AreaOpener : MonoBehaviour
 {
+    public Table table;
     public int cost;
     public bool isReady;
     public GameObject targetObject;
@@ -18,11 +19,18 @@ public class AreaOpener : MonoBehaviour
 
     public bool paint;
     public bool piano;
+    public bool violin;
+    public bool flute;
+    public bool sculp;
 
 
     void Start()
     {
-        targetObject.SetActive(false);
+        if (targetObject != null)
+        {
+            targetObject.SetActive(false);
+        }
+       // OpenArea();
     }
     private void Update()
     {
@@ -46,14 +54,24 @@ public class AreaOpener : MonoBehaviour
         {
             transform.GetChild(i).transform.gameObject.SetActive(false);
         }
-        Vector3 scale = targetObject.transform.localScale;
-        targetObject.transform.localScale = Vector3.zero;
-        targetObject.SetActive(true);
-        targetObject.transform.DOScale(scale, 0.75f).OnComplete(() =>
+
+        if (targetObject != null)
+        {
+            Vector3 scale = targetObject.transform.localScale;
+            targetObject.transform.localScale = Vector3.zero;
+            targetObject.SetActive(true);
+            targetObject.transform.DOScale(scale, 0.75f).OnComplete(() =>
+            {
+                particle.SetActive(true);
+                isReady = true;
+            });
+        }
+        else
         {
             particle.SetActive(true);
             isReady = true;
-        });
+        }
+        
     }
 
     IEnumerator GetNewStudent()

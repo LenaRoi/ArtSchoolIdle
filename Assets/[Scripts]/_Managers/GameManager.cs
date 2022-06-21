@@ -46,6 +46,7 @@ namespace EKTemplate
         {
             money += amount;
             DataManager.instance.SetMoney(money);
+            UIManager.instance.gamePanel.SetMoney(money);
         }
 
         public void LevelUp()

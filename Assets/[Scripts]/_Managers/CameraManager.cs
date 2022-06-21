@@ -12,6 +12,8 @@ namespace EKTemplate
         public float camSpeed = 10;
         public float additionalPos;
 
+        public Vector3 normalOffsets;
+
         #region Singleton
         public static CameraManager instance = null;
         private void Awake()
@@ -26,7 +28,7 @@ namespace EKTemplate
 
         private void Start()
         {
-           // target = GameManager.instance.Player.transform;
+            normalOffsets = offset;
         }
         void FixedUpdate()
         {
@@ -36,6 +38,17 @@ namespace EKTemplate
 
             Vector3 dir = new Vector3(target.position.x, target.position.y, target.position.z + additionalPos) + new Vector3(0, 0, 0f) - transform.position;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.fixedDeltaTime * camSpeed);
+        }
+
+
+        public void GetNormal()
+        {
+            offset = normalOffsets;
+        }
+
+        public void HelpCam()
+        {
+            offset = new Vector3(0, 5, -6f);
         }
     }
 }
